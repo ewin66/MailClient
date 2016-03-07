@@ -543,7 +543,7 @@ namespace DevExpress.MailClient.Win {
 
         private static DataTable CreateDataTable(string table) {
             DataSet dataSet = new DataSet();
-            string dataFile = FilesHelper.FindingFileName(Application.StartupPath, "Data\\Mail.xml");
+            var dataFile = Path.Combine(Application.StartupPath, "Data\\Mail.xml");
             if(dataFile != string.Empty) {
                 FileInfo fi = new FileInfo(dataFile);
                 dataSet.ReadXml(fi.FullName);
