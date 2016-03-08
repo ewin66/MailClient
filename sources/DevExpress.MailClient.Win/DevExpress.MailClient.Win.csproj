@@ -58,49 +58,154 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.Data.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.Printing.v15.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.Office.v15.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.Docs.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.RichEdit.v15.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.SpellChecker.v15.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.Utils.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraBars.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraEditors.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraGrid.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraLayout.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraNavBar.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraPrinting.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v15.2.Extensions"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraSpellChecker.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraTreeList.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting.Extensions"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraScheduler.v15.2"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraScheduler.v15.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions"><HintPath></HintPath><Private>False</Private></Reference>
-    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.2.Extensions">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting.Extensions">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.ServiceModel">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.ServiceModel.Web">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    <Private>False</Private></Reference>
-    <Reference Include="System.Data"><Private>False</Private></Reference>
-    <Reference Include="System.Deployment"><Private>False</Private></Reference>
-    <Reference Include="System.Drawing"><Private>False</Private></Reference>
-    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
-    <Reference Include="System.Xml"><Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonControls.cs">
@@ -230,12 +335,6 @@
     </Compile>
     <Compile Include="Helpers.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="LanguageSelectorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LanguageSelectorForm.Designer.cs">
-      <DependentUpon>LanguageSelectorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Calendar.cs">
       <SubType>UserControl</SubType>
@@ -485,9 +584,6 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="LanguageSelectorForm.resx">
-      <DependentUpon>LanguageSelectorForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
@@ -543,6 +639,7 @@
       <DependentUpon>Tasks.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.fa.resx" />
     <EmbeddedResource Include="Properties\Resources.he.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -558,7 +655,6 @@
     <EmbeddedResource Include="Properties\Resources.ar.resx" />
     <None Include="App.config" />
     <EmbeddedResource Include="Dictionaries\default.zip" />
-    
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -629,6 +725,9 @@
     <EmbeddedResource Include="he\DevExpress.XtraScheduler.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraSpellChecker.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraTreeList.v15.1.resources.dll" />
+    <Content Include="Data\Mail.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icons\DevExpress.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
