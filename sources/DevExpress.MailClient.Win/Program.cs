@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.MailClient.Win.Helpers;
 using DevExpress.XtraSplashScreen;
 using DevExpress.Skins;
 using DevExpress.Data.Filtering;
@@ -30,8 +33,38 @@ namespace DevExpress.MailClient.Win {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            SplashScreenManager.ShowForm(null, typeof(ssMain), true, true, false, 1000);
-            Application.Run(new frmMain());
+            bool accountCreated = CheckAccountExists();
+            if (!accountCreated)
+            {
+                accountCreated = CreateAccount();
+            }
+
+            if (accountCreated)
+            {
+                ShowSplashScreen();
+                Application.Run(new frmMain()); 
+            }
+        }
+
+        private static void ShowSplashScreen()
+        {
+            if (AppContext.CurrentContext.Settings.ShowSplashScreen)
+            {
+                SplashScreenManager.ShowForm(null, typeof(ssMain), true, true, false, 1000);    
+            }
+        }
+
+        private static bool CheckAccountExists()
+        {
+            return File.Exists(Constants.ACCOUNT_FILE);
+        }
+
+        private static bool CreateAccount()
+        {
+            using (var accountForm = new EmailAccountForm())
+            {
+                return accountForm.ShowDialog() == DialogResult.OK;
+            }
         }
     }
 }

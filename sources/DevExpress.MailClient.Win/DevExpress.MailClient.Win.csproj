@@ -171,6 +171,7 @@
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
       <Private>False</Private>
@@ -208,9 +209,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettings.cs" />
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="Controls.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -246,6 +249,12 @@
     </Compile>
     <Compile Include="Controls\ucMessageInfo.Designer.cs">
       <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmailAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmailAccountForm.Designer.cs">
+      <DependentUpon>EmailAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEditTask.cs">
       <SubType>Form</SubType>
@@ -336,6 +345,9 @@
     <Compile Include="Helpers.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Helpers\AppContext.cs" />
+    <Compile Include="Helpers\AppSettingsReader.cs" />
+    <Compile Include="Helpers\IAppSettingsReader.cs" />
     <Compile Include="Modules\Calendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -458,6 +470,9 @@
     <EmbeddedResource Include="Controls\ucMessageInfo.resx">
       <DependentUpon>ucMessageInfo.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmailAccountForm.resx">
+      <DependentUpon>EmailAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCustomDate.ar.resx">
       <DependentUpon>frmCustomDate.cs</DependentUpon>
@@ -725,6 +740,9 @@
     <EmbeddedResource Include="he\DevExpress.XtraScheduler.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraSpellChecker.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraTreeList.v15.1.resources.dll" />
+    <Content Include="Data\Account.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Mail.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
