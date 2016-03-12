@@ -234,3 +234,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/sources/DevExpress.MailClient.Win/Properties/licenses.licx
