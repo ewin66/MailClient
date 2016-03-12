@@ -234,4 +234,7 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Include DLLs if they're in the ar directory
+!/ar/*.dll
 /sources/DevExpress.MailClient.Win/Properties/licenses.licx
