@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DevExpress.MailClient.Win")]
+[assembly: AssemblyTitle("DevExpress.MailClient.EF")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany(AssemblyInfo.AssemblyCompany)]
-[assembly: AssemblyProduct("DevExpress.MailClient.Win")]
-[assembly: AssemblyCopyright(AssemblyInfo.AssemblyCopyright)]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DevExpress.MailClient.EF")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c8dd2226-ec1a-4f92-9d9d-3c0d480de006")]
+[assembly: Guid("c94449c3-d0ec-47b4-a304-7a5500a84491")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,6 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-// test
-[assembly: AssemblyVersion(AssemblyInfo.Version)]
-[assembly: AssemblyFileVersion(AssemblyInfo.FileVersion)]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

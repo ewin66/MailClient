@@ -11,6 +11,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.MailClient.Win.Forms;
 using System.Drawing;
 using System.Threading;
+using DevExpress.MailClient.EF;
 using DevExpress.XtraEditors;
 
 namespace DevExpress.MailClient.Win {
@@ -20,6 +21,18 @@ namespace DevExpress.MailClient.Win {
         /// </summary>
         [STAThread]
         static void Main(string[] arguments) {
+
+            // TODO uncomment to test EF code first sample
+            // Prerequisites: SQL Server express
+            using (var mailContext = new MailContext())
+            {
+                var savedUser = new User {Name = "Test", Password = "Test"};
+                mailContext.Users.Add(savedUser);
+                mailContext.SaveChanges();
+
+                var retrievedUser = mailContext.Users.First();
+                Console.WriteLine($"User: {retrievedUser.Name}");
+            }
 
             DataHelper.ApplicationArguments = arguments;
             DevExpress.Utils.LocalizationHelper.SetCurrentCulture(DataHelper.ApplicationArguments);
