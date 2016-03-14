@@ -24,15 +24,15 @@ namespace DevExpress.MailClient.Win {
 
             // TODO uncomment to test EF code first sample
             // Prerequisites: SQL Server express
-            using (var mailContext = new MailContext())
-            {
-                var savedUser = new User {Name = "Test", Password = "Test"};
-                mailContext.Users.Add(savedUser);
-                mailContext.SaveChanges();
+            //using (var mailContext = new MailContext())
+            //{
+            //    var savedUser = new User {Name = "Test", Password = "Test"};
+            //    mailContext.Users.Add(savedUser);
+            //    mailContext.SaveChanges();
 
-                var retrievedUser = mailContext.Users.First();
-                Console.WriteLine($"User: {retrievedUser.Name}");
-            }
+            //    var retrievedUser = mailContext.Users.First();
+            //    Console.WriteLine($"User: {retrievedUser.Name}");
+            //}
 
             DataHelper.ApplicationArguments = arguments;
             DevExpress.Utils.LocalizationHelper.SetCurrentCulture(DataHelper.ApplicationArguments);
