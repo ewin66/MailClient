@@ -16,6 +16,7 @@ using DevExpress.XtraEditors;
 using System.Net.Mail;
 
 // Hello eveybody! Gabi was here :P
+// And I'm still here...
 
 namespace DevExpress.MailClient.Win {
     static class Program {
