@@ -356,6 +356,7 @@
     </Compile>
     <Compile Include="Helpers\AppContext.cs" />
     <Compile Include="Helpers\AppSettingsReader.cs" />
+    <Compile Include="Helpers\Email\EmailSender.cs" />
     <Compile Include="Helpers\IAppSettingsReader.cs" />
     <Compile Include="Modules\Calendar.cs">
       <SubType>UserControl</SubType>
@@ -663,6 +664,7 @@
       <DependentUpon>Tasks.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.fa.resx" />
     <EmbeddedResource Include="Properties\Resources.he.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -749,7 +751,7 @@
     <EmbeddedResource Include="he\DevExpress.XtraScheduler.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraSpellChecker.v15.1.resources.dll" />
     <EmbeddedResource Include="he\DevExpress.XtraTreeList.v15.1.resources.dll" />
-    <Content Include="Data\Account.xml">
+    <Content Include="Data\Accounts.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Mail.xml">

@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars;
+using System.Net.Mail;
+using DevExpress.MailClient.Win.Helpers.Email;
 
 namespace DevExpress.MailClient.Win {
     public partial class frmEditMail :RibbonForm {
@@ -16,6 +18,8 @@ namespace DevExpress.MailClient.Win {
         bool newMessage = true;
         string messageFrom = string.Empty;
         readonly Message sourceMessage;
+        private bool _messageSent;
+
 
         public frmEditMail() {
             InitializeComponent();
@@ -119,18 +123,24 @@ namespace DevExpress.MailClient.Win {
         //            Close();
         //    }
         //}
-        void richEditControl_KeyDown(object sender, KeyEventArgs e) {
+        private void richEditControl_KeyDown(object sender, KeyEventArgs e) {
             if((e.Modifiers & Keys.Control) != 0 && e.KeyCode == Keys.S) {
                 ApplyChanges();
                 e.Handled = true;
             }
         }
 
-        void frmEditMail_FormClosing(object sender, FormClosingEventArgs e) {
-            DialogResult result = QueryClose();
-            e.Cancel = result == DialogResult.Cancel;
+        private void frmEditMail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!_messageSent)
+            {
+                DialogResult result = QueryClose();
+                e.Cancel = result == DialogResult.Cancel;
+            }
         }
-        DialogResult QueryClose() {
+
+        private DialogResult QueryClose()
+        {
             if(!IsMessageModified)
                 return DialogResult.Yes;
 
@@ -146,7 +156,8 @@ namespace DevExpress.MailClient.Win {
                     return DialogResult.Yes;
             }
         }
-        void ApplyChanges() {
+
+        private void ApplyChanges() {
             sourceMessage.Date = DateTime.Now;
             sourceMessage.Text = richEditControl.HtmlText;
             sourceMessage.SetPlainText(ObjectHelper.GetPlainText(richEditControl.Text.TrimStart()));
@@ -154,6 +165,53 @@ namespace DevExpress.MailClient.Win {
             sourceMessage.From = edtTo.EditValue == null ? null : edtTo.EditValue.ToString();
             IsMessageModified = false;
             RaiseSaveMessage();
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _messageSent = false;
+                var message = CreateMessage();
+                var emailSender = new EmailSender();
+                emailSender.Send(message);
+                _messageSent = true;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Error - Cannot send email.\r\n" + ex.Message);
+            }
+        }
+
+        private MailMessage CreateMessage()
+        {
+            MailMessage message = null;
+            var receivers = GetEmailReceivers();
+            if (!string.IsNullOrEmpty(receivers))
+            {
+                message = new MailMessage();
+                message.From = new MailAddress("silentbusters@gmail.com");
+                message.To.Add(receivers);
+                message.Body = richEditControl.Text;
+                message.Subject = edtSubject.Text;
+            }
+            return message;
+        }
+
+        private string GetEmailReceivers()
+        {
+            string receivers = string.Empty;
+            var tokens = edtTo.GetTokenList();
+            foreach (TokenEditToken token in tokens)
+            {
+                if(!string.IsNullOrEmpty(receivers))
+                {
+                    receivers += ",";
+                }
+                receivers += token.Description;
+            }
+            return receivers;
         }
     }
 }

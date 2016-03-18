@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Threading;
 using DevExpress.MailClient.EF;
 using DevExpress.XtraEditors;
+using System.Net.Mail;
 
 namespace DevExpress.MailClient.Win {
     static class Program {
@@ -69,7 +70,7 @@ namespace DevExpress.MailClient.Win {
 
         private static bool CheckAccountExists()
         {
-            return File.Exists(Constants.ACCOUNT_FILE);
+            return File.Exists(Constants.ACCOUNTS_FILE);
         }
 
         private static bool CreateAccount()

@@ -25,9 +25,9 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMail));
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling3 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling4 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling1 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling2 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
             this.lblDescription = new DevExpress.XtraEditors.LabelControl();
@@ -199,6 +199,7 @@
             this.showParagraphFormItem1 = new DevExpress.XtraRichEdit.UI.ShowParagraphFormItem();
             this.showEditStyleFormItem1 = new DevExpress.XtraRichEdit.UI.ShowEditStyleFormItem();
             this.showInsertTableCellsFormItem1 = new DevExpress.XtraRichEdit.UI.ShowInsertTableCellsFormItem();
+            this.btnSend = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
@@ -221,30 +222,26 @@
             // 
             // splitContainerControl1
             // 
-            resources.ApplyResources(this.splitContainerControl1, "splitContainerControl1");
-            this.buttonPanelTooltipController.SetAllowHtmlText(this.splitContainerControl1, ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("splitContainerControl1.AllowHtmlText"))));
             this.splitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel2;
+            resources.ApplyResources(this.splitContainerControl1, "splitContainerControl1");
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Name = "splitContainerControl1";
-            resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel1.Controls.Add(this.flyoutPanel1);
             this.splitContainerControl1.Panel1.Controls.Add(this.richEditControl);
             this.splitContainerControl1.Panel1.Controls.Add(this.panelControl);
-            resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
+            resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel2.Controls.Add(this.ucMessageInfo1);
+            resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
             this.splitContainerControl1.SplitterPosition = 147;
-            this.buttonPanelTooltipController.SetTitle(this.splitContainerControl1, resources.GetString("splitContainerControl1.Title"));
-            this.buttonPanelTooltipController.SetToolTip(this.splitContainerControl1, resources.GetString("splitContainerControl1.ToolTip"));
-            this.buttonPanelTooltipController.SetToolTipIconType(this.splitContainerControl1, ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("splitContainerControl1.ToolTipIconType"))));
             // 
             // flyoutPanel1
             // 
-            resources.ApplyResources(this.flyoutPanel1, "flyoutPanel1");
             this.flyoutPanel1.Controls.Add(this.lblDescription);
             this.flyoutPanel1.Controls.Add(this.lblMail);
             this.flyoutPanel1.Controls.Add(this.picContact);
             this.flyoutPanel1.Controls.Add(this.buttonPanel);
+            resources.ApplyResources(this.flyoutPanel1, "flyoutPanel1");
             this.flyoutPanel1.Name = "flyoutPanel1";
             this.flyoutPanel1.OwnerControl = this.edtTo;
             // 
@@ -255,31 +252,18 @@
             // 
             // lblMail
             // 
-            resources.ApplyResources(this.lblMail, "lblMail");
-            this.lblMail.AppearanceDisabled.Image = ((System.Drawing.Image)(resources.GetObject("lblMail.Appearance.DisabledImage")));
             this.lblMail.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("lblMail.Appearance.Font")));
-            this.lblMail.Appearance.FontSizeDelta = ((int)(resources.GetObject("lblMail.Appearance.FontSizeDelta")));
-            this.lblMail.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("lblMail.Appearance.FontStyleDelta")));
-            this.lblMail.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("lblMail.Appearance.GradientMode")));
-            this.lblMail.AppearanceHovered.Image = ((System.Drawing.Image)(resources.GetObject("lblMail.Appearance.HoverImage")));
-            this.lblMail.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("lblMail.Appearance.Image")));
-            this.lblMail.AppearancePressed.Image = ((System.Drawing.Image)(resources.GetObject("lblMail.Appearance.PressedImage")));
+            resources.ApplyResources(this.lblMail, "lblMail");
             this.lblMail.Name = "lblMail";
             // 
             // picContact
             // 
-            resources.ApplyResources(this.picContact, "picContact");
             this.picContact.EditValue = global::DevExpress.MailClient.Win.Properties.Resources.Unknown_user;
+            resources.ApplyResources(this.picContact, "picContact");
             this.picContact.MenuManager = this.ribbonControl;
             this.picContact.Name = "picContact";
-            this.picContact.Properties.AccessibleDescription = resources.GetString("picContact.Properties.AccessibleDescription");
-            this.picContact.Properties.AccessibleName = resources.GetString("picContact.Properties.AccessibleName");
             this.picContact.Properties.AllowFocused = false;
             this.picContact.Properties.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("picContact.Properties.Appearance.BackColor")));
-            this.picContact.Properties.Appearance.FontSizeDelta = ((int)(resources.GetObject("picContact.Properties.Appearance.FontSizeDelta")));
-            this.picContact.Properties.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("picContact.Properties.Appearance.FontStyleDelta")));
-            this.picContact.Properties.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("picContact.Properties.Appearance.GradientMode")));
-            this.picContact.Properties.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("picContact.Properties.Appearance.Image")));
             this.picContact.Properties.Appearance.Options.UseBackColor = true;
             this.picContact.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.picContact.Properties.ShowMenu = false;
@@ -287,8 +271,8 @@
             // 
             // ribbonControl
             // 
-            resources.ApplyResources(this.ribbonControl, "ribbonControl");
             this.ribbonControl.ApplicationButtonDropDownControl = this.applicationMenu;
+            resources.ApplyResources(this.ribbonControl, "ribbonControl");
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
@@ -436,10 +420,6 @@
             this.applicationMenu.ItemLinks.Add(this.quickPrintItem1);
             this.applicationMenu.ItemLinks.Add(this.printItem1);
             this.applicationMenu.ItemLinks.Add(this.printPreviewItem1);
-            this.applicationMenu.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("applicationMenu.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.applicationMenu.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("applicationMenu.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.applicationMenu.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("applicationMenu.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.applicationMenu.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("applicationMenu.MenuAppearance.HeaderItemAppearance.Image")));
             this.applicationMenu.Name = "applicationMenu";
             this.applicationMenu.Ribbon = this.ribbonControl;
             // 
@@ -454,76 +434,61 @@
             // 
             // quickPrintItem1
             // 
-            resources.ApplyResources(this.quickPrintItem1, "quickPrintItem1");
             this.quickPrintItem1.Id = 5;
             this.quickPrintItem1.Name = "quickPrintItem1";
             // 
             // printItem1
             // 
-            resources.ApplyResources(this.printItem1, "printItem1");
             this.printItem1.Id = 6;
             this.printItem1.Name = "printItem1";
             // 
             // printPreviewItem1
             // 
-            resources.ApplyResources(this.printPreviewItem1, "printPreviewItem1");
             this.printPreviewItem1.Id = 7;
             this.printPreviewItem1.Name = "printPreviewItem1";
             // 
             // undoItem1
             // 
-            resources.ApplyResources(this.undoItem1, "undoItem1");
             this.undoItem1.Id = 8;
             this.undoItem1.Name = "undoItem1";
             // 
             // redoItem1
             // 
-            resources.ApplyResources(this.redoItem1, "redoItem1");
             this.redoItem1.Id = 9;
             this.redoItem1.Name = "redoItem1";
             // 
             // pasteItem1
             // 
-            resources.ApplyResources(this.pasteItem1, "pasteItem1");
             this.pasteItem1.Id = 17;
             this.pasteItem1.Name = "pasteItem1";
             // 
             // cutItem1
             // 
-            resources.ApplyResources(this.cutItem1, "cutItem1");
             this.cutItem1.Id = 18;
             this.cutItem1.Name = "cutItem1";
             // 
             // copyItem1
             // 
-            resources.ApplyResources(this.copyItem1, "copyItem1");
             this.copyItem1.Id = 19;
             this.copyItem1.Name = "copyItem1";
             // 
             // pasteSpecialItem1
             // 
-            resources.ApplyResources(this.pasteSpecialItem1, "pasteSpecialItem1");
             this.pasteSpecialItem1.Id = 20;
             this.pasteSpecialItem1.Name = "pasteSpecialItem1";
             // 
             // barButtonGroup1
             // 
-            resources.ApplyResources(this.barButtonGroup1, "barButtonGroup1");
             this.barButtonGroup1.Id = 10;
             this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1);
             this.barButtonGroup1.ItemLinks.Add(this.changeFontSizeItem1);
             this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1);
             this.barButtonGroup1.ItemLinks.Add(this.fontSizeDecreaseItem1);
-            this.barButtonGroup1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup1.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup1.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup1.Name = "barButtonGroup1";
             this.barButtonGroup1.Tag = "{97BBE334-159B-44d9-A168-0411957565E8}";
             // 
             // changeFontNameItem1
             // 
-            resources.ApplyResources(this.changeFontNameItem1, "changeFontNameItem1");
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
             this.changeFontNameItem1.Id = 21;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
@@ -537,7 +502,6 @@
             // 
             // changeFontSizeItem1
             // 
-            resources.ApplyResources(this.changeFontSizeItem1, "changeFontSizeItem1");
             this.changeFontSizeItem1.Edit = this.repositoryItemRichEditFontSizeEdit1;
             this.changeFontSizeItem1.Id = 22;
             this.changeFontSizeItem1.Name = "changeFontSizeItem1";
@@ -552,12 +516,10 @@
             // 
             // richEditControl
             // 
-            resources.ApplyResources(this.richEditControl, "richEditControl");
             this.richEditControl.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Draft;
-            this.richEditControl.EnableToolTips = true;
+            resources.ApplyResources(this.richEditControl, "richEditControl");
             this.richEditControl.MenuManager = this.ribbonControl;
             this.richEditControl.Name = "richEditControl";
-            this.richEditControl.Options.Bookmarks.AllowNameResolution = false;
             this.richEditControl.Options.DocumentCapabilities.Bookmarks = DevExpress.XtraRichEdit.DocumentCapability.Disabled;
             this.richEditControl.Options.DocumentCapabilities.HeadersFooters = DevExpress.XtraRichEdit.DocumentCapability.Disabled;
             this.richEditControl.Options.DocumentCapabilities.Sections = DevExpress.XtraRichEdit.DocumentCapability.Disabled;
@@ -565,11 +527,10 @@
             this.richEditControl.Options.Export.Html.EmbedImages = true;
             this.richEditControl.Options.Export.Html.HtmlNumberingListExportFormat = DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat.PlainTextFormat;
             this.richEditControl.Options.Export.Mht.HtmlNumberingListExportFormat = DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat.PlainTextFormat;
-            this.richEditControl.Options.Export.PlainText.ExportFinalParagraphMark = DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark.Never;
             this.richEditControl.Options.HorizontalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.SpellChecker = this.spellChecker1;
-            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling3);
+            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling1);
             this.richEditControl.SelectionChanged += new System.EventHandler(this.richEditControl_SelectionChanged);
             this.richEditControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richEditControl_KeyDown);
             // 
@@ -584,250 +545,181 @@
             resources.ApplyResources(this.edtSubject, "edtSubject");
             this.edtSubject.MenuManager = this.ribbonControl;
             this.edtSubject.Name = "edtSubject";
-            this.edtSubject.Properties.AccessibleDescription = resources.GetString("edtSubject.Properties.AccessibleDescription");
-            this.edtSubject.Properties.AccessibleName = resources.GetString("edtSubject.Properties.AccessibleName");
-            this.edtSubject.Properties.AutoHeight = ((bool)(resources.GetObject("edtSubject.Properties.AutoHeight")));
-            this.edtSubject.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("edtSubject.Properties.Mask.AutoComplete")));
-            this.edtSubject.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("edtSubject.Properties.Mask.BeepOnError")));
-            this.edtSubject.Properties.Mask.EditMask = resources.GetString("edtSubject.Properties.Mask.EditMask");
-            this.edtSubject.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("edtSubject.Properties.Mask.IgnoreMaskBlank")));
-            this.edtSubject.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("edtSubject.Properties.Mask.MaskType")));
-            this.edtSubject.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("edtSubject.Properties.Mask.PlaceHolder")));
-            this.edtSubject.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("edtSubject.Properties.Mask.SaveLiteral")));
-            this.edtSubject.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("edtSubject.Properties.Mask.ShowPlaceHolders")));
-            this.edtSubject.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("edtSubject.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.edtSubject.Properties.NullValuePrompt = resources.GetString("edtSubject.Properties.NullValuePrompt");
-            this.edtSubject.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("edtSubject.Properties.NullValuePromptShowForEmptyValue")));
             this.spellChecker1.SetShowSpellCheckMenu(this.edtSubject, true);
-            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling4);
+            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling2);
             this.edtSubject.EditValueChanged += new System.EventHandler(this.edtSubject_EditValueChanged);
             // 
             // fontSizeIncreaseItem1
             // 
-            resources.ApplyResources(this.fontSizeIncreaseItem1, "fontSizeIncreaseItem1");
             this.fontSizeIncreaseItem1.Id = 23;
             this.fontSizeIncreaseItem1.Name = "fontSizeIncreaseItem1";
             // 
             // fontSizeDecreaseItem1
             // 
-            resources.ApplyResources(this.fontSizeDecreaseItem1, "fontSizeDecreaseItem1");
             this.fontSizeDecreaseItem1.Id = 24;
             this.fontSizeDecreaseItem1.Name = "fontSizeDecreaseItem1";
             // 
             // barButtonGroup2
             // 
-            resources.ApplyResources(this.barButtonGroup2, "barButtonGroup2");
             this.barButtonGroup2.Id = 11;
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontBoldItem1);
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontItalicItem1);
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontUnderlineItem1);
-            this.barButtonGroup2.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup2.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup2.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup2.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup2.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup2.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup2.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup2.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup2.Name = "barButtonGroup2";
             this.barButtonGroup2.Tag = "{433DA7F0-03E2-4650-9DB5-66DD92D16E39}";
             // 
             // toggleFontBoldItem1
             // 
-            resources.ApplyResources(this.toggleFontBoldItem1, "toggleFontBoldItem1");
             this.toggleFontBoldItem1.Id = 25;
             this.toggleFontBoldItem1.Name = "toggleFontBoldItem1";
             // 
             // toggleFontItalicItem1
             // 
-            resources.ApplyResources(this.toggleFontItalicItem1, "toggleFontItalicItem1");
             this.toggleFontItalicItem1.Id = 26;
             this.toggleFontItalicItem1.Name = "toggleFontItalicItem1";
             // 
             // toggleFontUnderlineItem1
             // 
-            resources.ApplyResources(this.toggleFontUnderlineItem1, "toggleFontUnderlineItem1");
             this.toggleFontUnderlineItem1.Id = 27;
             this.toggleFontUnderlineItem1.Name = "toggleFontUnderlineItem1";
             // 
             // barButtonGroup3
             // 
-            resources.ApplyResources(this.barButtonGroup3, "barButtonGroup3");
             this.barButtonGroup3.Id = 12;
             this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1);
             this.barButtonGroup3.ItemLinks.Add(this.changeFontBackColorItem1);
-            this.barButtonGroup3.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup3.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup3.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup3.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup3.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup3.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup3.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup3.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup3.Name = "barButtonGroup3";
             this.barButtonGroup3.Tag = "{DF8C5334-EDE3-47c9-A42C-FE9A9247E180}";
             // 
             // changeFontColorItem1
             // 
-            resources.ApplyResources(this.changeFontColorItem1, "changeFontColorItem1");
             this.changeFontColorItem1.Id = 33;
             this.changeFontColorItem1.Name = "changeFontColorItem1";
             // 
             // changeFontBackColorItem1
             // 
-            resources.ApplyResources(this.changeFontBackColorItem1, "changeFontBackColorItem1");
             this.changeFontBackColorItem1.Id = 34;
             this.changeFontBackColorItem1.Name = "changeFontBackColorItem1";
             // 
             // barButtonGroup4
             // 
-            resources.ApplyResources(this.barButtonGroup4, "barButtonGroup4");
             this.barButtonGroup4.Id = 13;
             this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1);
             this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1);
-            this.barButtonGroup4.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup4.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup4.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup4.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup4.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup4.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup4.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup4.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup4.Name = "barButtonGroup4";
             this.barButtonGroup4.Tag = "{0B3A7A43-3079-4ce0-83A8-3789F5F6DC9F}";
             // 
             // toggleBulletedListItem1
             // 
-            resources.ApplyResources(this.toggleBulletedListItem1, "toggleBulletedListItem1");
             this.toggleBulletedListItem1.Id = 40;
             this.toggleBulletedListItem1.Name = "toggleBulletedListItem1";
             // 
             // toggleNumberingListItem1
             // 
-            resources.ApplyResources(this.toggleNumberingListItem1, "toggleNumberingListItem1");
             this.toggleNumberingListItem1.Id = 41;
             this.toggleNumberingListItem1.Name = "toggleNumberingListItem1";
             // 
             // barButtonGroup5
             // 
-            resources.ApplyResources(this.barButtonGroup5, "barButtonGroup5");
             this.barButtonGroup5.Id = 14;
             this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1);
             this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1);
-            this.barButtonGroup5.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup5.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup5.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup5.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup5.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup5.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup5.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup5.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup5.Name = "barButtonGroup5";
             this.barButtonGroup5.Tag = "{4747D5AB-2BEB-4ea6-9A1D-8E4FB36F1B40}";
             // 
             // decreaseIndentItem1
             // 
-            resources.ApplyResources(this.decreaseIndentItem1, "decreaseIndentItem1");
             this.decreaseIndentItem1.Id = 43;
             this.decreaseIndentItem1.Name = "decreaseIndentItem1";
             // 
             // increaseIndentItem1
             // 
-            resources.ApplyResources(this.increaseIndentItem1, "increaseIndentItem1");
             this.increaseIndentItem1.Id = 44;
             this.increaseIndentItem1.Name = "increaseIndentItem1";
             // 
             // barButtonGroup6
             // 
-            resources.ApplyResources(this.barButtonGroup6, "barButtonGroup6");
             this.barButtonGroup6.Id = 15;
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1);
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1);
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1);
-            this.barButtonGroup6.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup6.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup6.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup6.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup6.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup6.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup6.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup6.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup6.Name = "barButtonGroup6";
             this.barButtonGroup6.Tag = "{8E89E775-996E-49a0-AADA-DE338E34732E}";
             // 
             // toggleParagraphAlignmentLeftItem1
             // 
-            resources.ApplyResources(this.toggleParagraphAlignmentLeftItem1, "toggleParagraphAlignmentLeftItem1");
             this.toggleParagraphAlignmentLeftItem1.Id = 46;
             this.toggleParagraphAlignmentLeftItem1.Name = "toggleParagraphAlignmentLeftItem1";
             // 
             // toggleParagraphAlignmentCenterItem1
             // 
-            resources.ApplyResources(this.toggleParagraphAlignmentCenterItem1, "toggleParagraphAlignmentCenterItem1");
             this.toggleParagraphAlignmentCenterItem1.Id = 47;
             this.toggleParagraphAlignmentCenterItem1.Name = "toggleParagraphAlignmentCenterItem1";
             // 
             // toggleParagraphAlignmentRightItem1
             // 
-            resources.ApplyResources(this.toggleParagraphAlignmentRightItem1, "toggleParagraphAlignmentRightItem1");
             this.toggleParagraphAlignmentRightItem1.Id = 48;
             this.toggleParagraphAlignmentRightItem1.Name = "toggleParagraphAlignmentRightItem1";
             // 
             // barButtonGroup7
             // 
-            resources.ApplyResources(this.barButtonGroup7, "barButtonGroup7");
             this.barButtonGroup7.Id = 16;
             this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1);
-            this.barButtonGroup7.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barButtonGroup7.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.barButtonGroup7.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barButtonGroup7.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.barButtonGroup7.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barButtonGroup7.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.barButtonGroup7.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup7.MenuAppearance.HeaderItemAppearance.Image")));
             this.barButtonGroup7.Name = "barButtonGroup7";
             this.barButtonGroup7.Tag = "{9A8DEAD8-3890-4857-A395-EC625FD02217}";
             // 
             // changeParagraphBackColorItem1
             // 
-            resources.ApplyResources(this.changeParagraphBackColorItem1, "changeParagraphBackColorItem1");
             this.changeParagraphBackColorItem1.Id = 59;
             this.changeParagraphBackColorItem1.Name = "changeParagraphBackColorItem1";
             // 
             // findItem1
             // 
-            resources.ApplyResources(this.findItem1, "findItem1");
             this.findItem1.Id = 61;
             this.findItem1.Name = "findItem1";
             // 
             // replaceItem1
             // 
-            resources.ApplyResources(this.replaceItem1, "replaceItem1");
             this.replaceItem1.Id = 62;
             this.replaceItem1.Name = "replaceItem1";
             // 
             // insertTableItem1
             // 
-            resources.ApplyResources(this.insertTableItem1, "insertTableItem1");
             this.insertTableItem1.Id = 64;
             this.insertTableItem1.Name = "insertTableItem1";
             // 
             // insertPictureItem1
             // 
-            resources.ApplyResources(this.insertPictureItem1, "insertPictureItem1");
             this.insertPictureItem1.Id = 65;
             this.insertPictureItem1.Name = "insertPictureItem1";
             // 
             // insertFloatingPictureItem1
             // 
-            resources.ApplyResources(this.insertFloatingPictureItem1, "insertFloatingPictureItem1");
             this.insertFloatingPictureItem1.Id = 66;
             this.insertFloatingPictureItem1.Name = "insertFloatingPictureItem1";
             // 
             // insertHyperlinkItem1
             // 
-            resources.ApplyResources(this.insertHyperlinkItem1, "insertHyperlinkItem1");
             this.insertHyperlinkItem1.Id = 68;
             this.insertHyperlinkItem1.Name = "insertHyperlinkItem1";
             // 
             // insertTextBoxItem1
             // 
-            resources.ApplyResources(this.insertTextBoxItem1, "insertTextBoxItem1");
             this.insertTextBoxItem1.Id = 73;
             this.insertTextBoxItem1.Name = "insertTextBoxItem1";
             // 
             // insertSymbolItem1
             // 
-            resources.ApplyResources(this.insertSymbolItem1, "insertSymbolItem1");
             this.insertSymbolItem1.Id = 74;
             this.insertSymbolItem1.Name = "insertSymbolItem1";
             // 
             // changeTableCellsShadingItem1
             // 
-            resources.ApplyResources(this.changeTableCellsShadingItem1, "changeTableCellsShadingItem1");
             this.changeTableCellsShadingItem1.Id = 75;
             this.changeTableCellsShadingItem1.Name = "changeTableCellsShadingItem1";
             // 
             // changeTableBordersItem1
             // 
-            resources.ApplyResources(this.changeTableBordersItem1, "changeTableBordersItem1");
             this.changeTableBordersItem1.Id = 76;
             this.changeTableBordersItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsBottomBorderItem1),
@@ -841,89 +733,74 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsInsideHorizontalBorderItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsInsideVerticalBorderItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleShowTableGridLinesItem1)});
-            this.changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("changeTableBordersItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.changeTableBordersItem1.Name = "changeTableBordersItem1";
             // 
             // toggleTableCellsBottomBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsBottomBorderItem1, "toggleTableCellsBottomBorderItem1");
             this.toggleTableCellsBottomBorderItem1.Id = 77;
             this.toggleTableCellsBottomBorderItem1.Name = "toggleTableCellsBottomBorderItem1";
             // 
             // toggleTableCellsTopBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsTopBorderItem1, "toggleTableCellsTopBorderItem1");
             this.toggleTableCellsTopBorderItem1.Id = 78;
             this.toggleTableCellsTopBorderItem1.Name = "toggleTableCellsTopBorderItem1";
             // 
             // toggleTableCellsLeftBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsLeftBorderItem1, "toggleTableCellsLeftBorderItem1");
             this.toggleTableCellsLeftBorderItem1.Id = 79;
             this.toggleTableCellsLeftBorderItem1.Name = "toggleTableCellsLeftBorderItem1";
             // 
             // toggleTableCellsRightBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsRightBorderItem1, "toggleTableCellsRightBorderItem1");
             this.toggleTableCellsRightBorderItem1.Id = 80;
             this.toggleTableCellsRightBorderItem1.Name = "toggleTableCellsRightBorderItem1";
             // 
             // resetTableCellsAllBordersItem1
             // 
-            resources.ApplyResources(this.resetTableCellsAllBordersItem1, "resetTableCellsAllBordersItem1");
             this.resetTableCellsAllBordersItem1.Id = 81;
             this.resetTableCellsAllBordersItem1.Name = "resetTableCellsAllBordersItem1";
             // 
             // toggleTableCellsAllBordersItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsAllBordersItem1, "toggleTableCellsAllBordersItem1");
             this.toggleTableCellsAllBordersItem1.Id = 82;
             this.toggleTableCellsAllBordersItem1.Name = "toggleTableCellsAllBordersItem1";
             // 
             // toggleTableCellsOutsideBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsOutsideBorderItem1, "toggleTableCellsOutsideBorderItem1");
             this.toggleTableCellsOutsideBorderItem1.Id = 83;
             this.toggleTableCellsOutsideBorderItem1.Name = "toggleTableCellsOutsideBorderItem1";
             // 
             // toggleTableCellsInsideBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsInsideBorderItem1, "toggleTableCellsInsideBorderItem1");
             this.toggleTableCellsInsideBorderItem1.Id = 84;
             this.toggleTableCellsInsideBorderItem1.Name = "toggleTableCellsInsideBorderItem1";
             // 
             // toggleTableCellsInsideHorizontalBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsInsideHorizontalBorderItem1, "toggleTableCellsInsideHorizontalBorderItem1");
             this.toggleTableCellsInsideHorizontalBorderItem1.Id = 85;
             this.toggleTableCellsInsideHorizontalBorderItem1.Name = "toggleTableCellsInsideHorizontalBorderItem1";
             // 
             // toggleTableCellsInsideVerticalBorderItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsInsideVerticalBorderItem1, "toggleTableCellsInsideVerticalBorderItem1");
             this.toggleTableCellsInsideVerticalBorderItem1.Id = 86;
             this.toggleTableCellsInsideVerticalBorderItem1.Name = "toggleTableCellsInsideVerticalBorderItem1";
             // 
             // toggleShowTableGridLinesItem1
             // 
-            resources.ApplyResources(this.toggleShowTableGridLinesItem1, "toggleShowTableGridLinesItem1");
             this.toggleShowTableGridLinesItem1.Id = 87;
             this.toggleShowTableGridLinesItem1.Name = "toggleShowTableGridLinesItem1";
             // 
             // changeTableBorderLineStyleItem1
             // 
-            resources.ApplyResources(this.changeTableBorderLineStyleItem1, "changeTableBorderLineStyleItem1");
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle1;
-            borderInfo2.Color = System.Drawing.Color.Black;
-            borderInfo2.Frame = false;
-            borderInfo2.Offset = 0;
-            borderInfo2.Shadow = false;
-            borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
-            borderInfo2.Width = 10;
-            this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
+            borderInfo1.Color = System.Drawing.Color.Black;
+            borderInfo1.Frame = false;
+            borderInfo1.Offset = 0;
+            borderInfo1.Shadow = false;
+            borderInfo1.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
+            borderInfo1.Width = 10;
+            this.changeTableBorderLineStyleItem1.EditValue = borderInfo1;
+            resources.ApplyResources(this.changeTableBorderLineStyleItem1, "changeTableBorderLineStyleItem1");
             this.changeTableBorderLineStyleItem1.Id = 88;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
             // 
@@ -937,9 +814,9 @@
             // 
             // changeTableBorderLineWeightItem1
             // 
-            resources.ApplyResources(this.changeTableBorderLineWeightItem1, "changeTableBorderLineWeightItem1");
             this.changeTableBorderLineWeightItem1.Edit = this.repositoryItemBorderLineWeight1;
             this.changeTableBorderLineWeightItem1.EditValue = 20;
+            resources.ApplyResources(this.changeTableBorderLineWeightItem1, "changeTableBorderLineWeightItem1");
             this.changeTableBorderLineWeightItem1.Id = 89;
             this.changeTableBorderLineWeightItem1.Name = "changeTableBorderLineWeightItem1";
             // 
@@ -953,237 +830,190 @@
             // 
             // changeTableBorderColorItem1
             // 
-            resources.ApplyResources(this.changeTableBorderColorItem1, "changeTableBorderColorItem1");
             this.changeTableBorderColorItem1.Id = 90;
             this.changeTableBorderColorItem1.Name = "changeTableBorderColorItem1";
             // 
             // selectTableElementsItem1
             // 
-            resources.ApplyResources(this.selectTableElementsItem1, "selectTableElementsItem1");
             this.selectTableElementsItem1.Id = 91;
             this.selectTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableCellItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableColumnItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableRowItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableItem1)});
-            this.selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("selectTableElementsItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.selectTableElementsItem1.Name = "selectTableElementsItem1";
             // 
             // selectTableCellItem1
             // 
-            resources.ApplyResources(this.selectTableCellItem1, "selectTableCellItem1");
             this.selectTableCellItem1.Id = 92;
             this.selectTableCellItem1.Name = "selectTableCellItem1";
             // 
             // selectTableColumnItem1
             // 
-            resources.ApplyResources(this.selectTableColumnItem1, "selectTableColumnItem1");
             this.selectTableColumnItem1.Id = 93;
             this.selectTableColumnItem1.Name = "selectTableColumnItem1";
             // 
             // selectTableRowItem1
             // 
-            resources.ApplyResources(this.selectTableRowItem1, "selectTableRowItem1");
             this.selectTableRowItem1.Id = 94;
             this.selectTableRowItem1.Name = "selectTableRowItem1";
             // 
             // selectTableItem1
             // 
-            resources.ApplyResources(this.selectTableItem1, "selectTableItem1");
             this.selectTableItem1.Id = 95;
             this.selectTableItem1.Name = "selectTableItem1";
             // 
             // showTablePropertiesFormItem1
             // 
-            resources.ApplyResources(this.showTablePropertiesFormItem1, "showTablePropertiesFormItem1");
             this.showTablePropertiesFormItem1.Id = 96;
             this.showTablePropertiesFormItem1.Name = "showTablePropertiesFormItem1";
             // 
             // deleteTableElementsItem1
             // 
-            resources.ApplyResources(this.deleteTableElementsItem1, "deleteTableElementsItem1");
             this.deleteTableElementsItem1.Id = 97;
             this.deleteTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.showDeleteTableCellsFormItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteTableColumnsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteTableRowsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteTableItem1)});
-            this.deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("deleteTableElementsItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.deleteTableElementsItem1.Name = "deleteTableElementsItem1";
             // 
             // showDeleteTableCellsFormItem1
             // 
-            resources.ApplyResources(this.showDeleteTableCellsFormItem1, "showDeleteTableCellsFormItem1");
             this.showDeleteTableCellsFormItem1.Id = 98;
             this.showDeleteTableCellsFormItem1.Name = "showDeleteTableCellsFormItem1";
             // 
             // deleteTableColumnsItem1
             // 
-            resources.ApplyResources(this.deleteTableColumnsItem1, "deleteTableColumnsItem1");
             this.deleteTableColumnsItem1.Id = 99;
             this.deleteTableColumnsItem1.Name = "deleteTableColumnsItem1";
             // 
             // deleteTableRowsItem1
             // 
-            resources.ApplyResources(this.deleteTableRowsItem1, "deleteTableRowsItem1");
             this.deleteTableRowsItem1.Id = 100;
             this.deleteTableRowsItem1.Name = "deleteTableRowsItem1";
             // 
             // deleteTableItem1
             // 
-            resources.ApplyResources(this.deleteTableItem1, "deleteTableItem1");
             this.deleteTableItem1.Id = 101;
             this.deleteTableItem1.Name = "deleteTableItem1";
             // 
             // insertTableRowAboveItem1
             // 
-            resources.ApplyResources(this.insertTableRowAboveItem1, "insertTableRowAboveItem1");
             this.insertTableRowAboveItem1.Id = 102;
             this.insertTableRowAboveItem1.Name = "insertTableRowAboveItem1";
             // 
             // insertTableRowBelowItem1
             // 
-            resources.ApplyResources(this.insertTableRowBelowItem1, "insertTableRowBelowItem1");
             this.insertTableRowBelowItem1.Id = 103;
             this.insertTableRowBelowItem1.Name = "insertTableRowBelowItem1";
             // 
             // insertTableColumnToLeftItem1
             // 
-            resources.ApplyResources(this.insertTableColumnToLeftItem1, "insertTableColumnToLeftItem1");
             this.insertTableColumnToLeftItem1.Id = 104;
             this.insertTableColumnToLeftItem1.Name = "insertTableColumnToLeftItem1";
             // 
             // insertTableColumnToRightItem1
             // 
-            resources.ApplyResources(this.insertTableColumnToRightItem1, "insertTableColumnToRightItem1");
             this.insertTableColumnToRightItem1.Id = 105;
             this.insertTableColumnToRightItem1.Name = "insertTableColumnToRightItem1";
             // 
             // mergeTableCellsItem1
             // 
-            resources.ApplyResources(this.mergeTableCellsItem1, "mergeTableCellsItem1");
             this.mergeTableCellsItem1.Id = 106;
             this.mergeTableCellsItem1.Name = "mergeTableCellsItem1";
             // 
             // showSplitTableCellsForm1
             // 
-            resources.ApplyResources(this.showSplitTableCellsForm1, "showSplitTableCellsForm1");
             this.showSplitTableCellsForm1.Id = 107;
             this.showSplitTableCellsForm1.Name = "showSplitTableCellsForm1";
             // 
             // splitTableItem1
             // 
-            resources.ApplyResources(this.splitTableItem1, "splitTableItem1");
             this.splitTableItem1.Id = 108;
             this.splitTableItem1.Name = "splitTableItem1";
             // 
             // toggleTableAutoFitItem1
             // 
-            resources.ApplyResources(this.toggleTableAutoFitItem1, "toggleTableAutoFitItem1");
             this.toggleTableAutoFitItem1.Id = 109;
             this.toggleTableAutoFitItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitContentsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitWindowItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableFixedColumnWidthItem1)});
-            this.toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
-            this.toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
-            this.toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.GradientMode")));
-            this.toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("toggleTableAutoFitItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.toggleTableAutoFitItem1.Name = "toggleTableAutoFitItem1";
             // 
             // toggleTableAutoFitContentsItem1
             // 
-            resources.ApplyResources(this.toggleTableAutoFitContentsItem1, "toggleTableAutoFitContentsItem1");
             this.toggleTableAutoFitContentsItem1.Id = 110;
             this.toggleTableAutoFitContentsItem1.Name = "toggleTableAutoFitContentsItem1";
             // 
             // toggleTableAutoFitWindowItem1
             // 
-            resources.ApplyResources(this.toggleTableAutoFitWindowItem1, "toggleTableAutoFitWindowItem1");
             this.toggleTableAutoFitWindowItem1.Id = 111;
             this.toggleTableAutoFitWindowItem1.Name = "toggleTableAutoFitWindowItem1";
             // 
             // toggleTableFixedColumnWidthItem1
             // 
-            resources.ApplyResources(this.toggleTableFixedColumnWidthItem1, "toggleTableFixedColumnWidthItem1");
             this.toggleTableFixedColumnWidthItem1.Id = 112;
             this.toggleTableFixedColumnWidthItem1.Name = "toggleTableFixedColumnWidthItem1";
             // 
             // toggleTableCellsTopLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsTopLeftAlignmentItem1, "toggleTableCellsTopLeftAlignmentItem1");
             this.toggleTableCellsTopLeftAlignmentItem1.Id = 113;
             this.toggleTableCellsTopLeftAlignmentItem1.Name = "toggleTableCellsTopLeftAlignmentItem1";
             // 
             // toggleTableCellsMiddleLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsMiddleLeftAlignmentItem1, "toggleTableCellsMiddleLeftAlignmentItem1");
             this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 114;
             this.toggleTableCellsMiddleLeftAlignmentItem1.Name = "toggleTableCellsMiddleLeftAlignmentItem1";
             // 
             // toggleTableCellsBottomLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsBottomLeftAlignmentItem1, "toggleTableCellsBottomLeftAlignmentItem1");
             this.toggleTableCellsBottomLeftAlignmentItem1.Id = 115;
             this.toggleTableCellsBottomLeftAlignmentItem1.Name = "toggleTableCellsBottomLeftAlignmentItem1";
             // 
             // toggleTableCellsTopCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsTopCenterAlignmentItem1, "toggleTableCellsTopCenterAlignmentItem1");
             this.toggleTableCellsTopCenterAlignmentItem1.Id = 116;
             this.toggleTableCellsTopCenterAlignmentItem1.Name = "toggleTableCellsTopCenterAlignmentItem1";
             // 
             // toggleTableCellsMiddleCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsMiddleCenterAlignmentItem1, "toggleTableCellsMiddleCenterAlignmentItem1");
             this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 117;
             this.toggleTableCellsMiddleCenterAlignmentItem1.Name = "toggleTableCellsMiddleCenterAlignmentItem1";
             // 
             // toggleTableCellsBottomCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsBottomCenterAlignmentItem1, "toggleTableCellsBottomCenterAlignmentItem1");
             this.toggleTableCellsBottomCenterAlignmentItem1.Id = 118;
             this.toggleTableCellsBottomCenterAlignmentItem1.Name = "toggleTableCellsBottomCenterAlignmentItem1";
             // 
             // toggleTableCellsTopRightAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsTopRightAlignmentItem1, "toggleTableCellsTopRightAlignmentItem1");
             this.toggleTableCellsTopRightAlignmentItem1.Id = 119;
             this.toggleTableCellsTopRightAlignmentItem1.Name = "toggleTableCellsTopRightAlignmentItem1";
             // 
             // toggleTableCellsMiddleRightAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsMiddleRightAlignmentItem1, "toggleTableCellsMiddleRightAlignmentItem1");
             this.toggleTableCellsMiddleRightAlignmentItem1.Id = 120;
             this.toggleTableCellsMiddleRightAlignmentItem1.Name = "toggleTableCellsMiddleRightAlignmentItem1";
             // 
             // toggleTableCellsBottomRightAlignmentItem1
             // 
-            resources.ApplyResources(this.toggleTableCellsBottomRightAlignmentItem1, "toggleTableCellsBottomRightAlignmentItem1");
             this.toggleTableCellsBottomRightAlignmentItem1.Id = 121;
             this.toggleTableCellsBottomRightAlignmentItem1.Name = "toggleTableCellsBottomRightAlignmentItem1";
             // 
             // changeFloatingObjectFillColorItem1
             // 
-            resources.ApplyResources(this.changeFloatingObjectFillColorItem1, "changeFloatingObjectFillColorItem1");
             this.changeFloatingObjectFillColorItem1.Id = 122;
             this.changeFloatingObjectFillColorItem1.Name = "changeFloatingObjectFillColorItem1";
             // 
             // changeFloatingObjectOutlineColorItem1
             // 
-            resources.ApplyResources(this.changeFloatingObjectOutlineColorItem1, "changeFloatingObjectOutlineColorItem1");
             this.changeFloatingObjectOutlineColorItem1.Id = 123;
             this.changeFloatingObjectOutlineColorItem1.Name = "changeFloatingObjectOutlineColorItem1";
             // 
             // changeFloatingObjectOutlineWeightItem1
             // 
-            resources.ApplyResources(this.changeFloatingObjectOutlineWeightItem1, "changeFloatingObjectOutlineWeightItem1");
             this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
             this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
             this.changeFloatingObjectOutlineWeightItem1.Id = 124;
@@ -1199,7 +1029,6 @@
             // 
             // changeFloatingObjectTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.changeFloatingObjectTextWrapTypeItem1, "changeFloatingObjectTextWrapTypeItem1");
             this.changeFloatingObjectTextWrapTypeItem1.Id = 125;
             this.changeFloatingObjectTextWrapTypeItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectSquareTextWrapTypeItem1),
@@ -1208,54 +1037,40 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopAndBottomTextWrapTypeItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBehindTextWrapTypeItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectInFrontOfTextWrapTypeItem1)});
-            this.changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.FontSiz" +
-        "eDelta")));
-            this.changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.FontSty" +
-        "leDelta")));
-            this.changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.Gradien" +
-        "tMode")));
-            this.changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("changeFloatingObjectTextWrapTypeItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.changeFloatingObjectTextWrapTypeItem1.Name = "changeFloatingObjectTextWrapTypeItem1";
             // 
             // setFloatingObjectSquareTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectSquareTextWrapTypeItem1, "setFloatingObjectSquareTextWrapTypeItem1");
             this.setFloatingObjectSquareTextWrapTypeItem1.Id = 126;
             this.setFloatingObjectSquareTextWrapTypeItem1.Name = "setFloatingObjectSquareTextWrapTypeItem1";
             // 
             // setFloatingObjectTightTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectTightTextWrapTypeItem1, "setFloatingObjectTightTextWrapTypeItem1");
             this.setFloatingObjectTightTextWrapTypeItem1.Id = 127;
             this.setFloatingObjectTightTextWrapTypeItem1.Name = "setFloatingObjectTightTextWrapTypeItem1";
             // 
             // setFloatingObjectThroughTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectThroughTextWrapTypeItem1, "setFloatingObjectThroughTextWrapTypeItem1");
             this.setFloatingObjectThroughTextWrapTypeItem1.Id = 128;
             this.setFloatingObjectThroughTextWrapTypeItem1.Name = "setFloatingObjectThroughTextWrapTypeItem1";
             // 
             // setFloatingObjectTopAndBottomTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectTopAndBottomTextWrapTypeItem1, "setFloatingObjectTopAndBottomTextWrapTypeItem1");
             this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 129;
             this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Name = "setFloatingObjectTopAndBottomTextWrapTypeItem1";
             // 
             // setFloatingObjectBehindTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectBehindTextWrapTypeItem1, "setFloatingObjectBehindTextWrapTypeItem1");
             this.setFloatingObjectBehindTextWrapTypeItem1.Id = 130;
             this.setFloatingObjectBehindTextWrapTypeItem1.Name = "setFloatingObjectBehindTextWrapTypeItem1";
             // 
             // setFloatingObjectInFrontOfTextWrapTypeItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectInFrontOfTextWrapTypeItem1, "setFloatingObjectInFrontOfTextWrapTypeItem1");
             this.setFloatingObjectInFrontOfTextWrapTypeItem1.Id = 131;
             this.setFloatingObjectInFrontOfTextWrapTypeItem1.Name = "setFloatingObjectInFrontOfTextWrapTypeItem1";
             // 
             // changeFloatingObjectAlignmentItem1
             // 
-            resources.ApplyResources(this.changeFloatingObjectAlignmentItem1, "changeFloatingObjectAlignmentItem1");
             this.changeFloatingObjectAlignmentItem1.Id = 132;
             this.changeFloatingObjectAlignmentItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopLeftAlignmentItem1),
@@ -1267,136 +1082,98 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomLeftAlignmentItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomCenterAlignmentItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomRightAlignmentItem1)});
-            this.changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.FontSizeDe" +
-        "lta")));
-            this.changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.FontStyleD" +
-        "elta")));
-            this.changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.GradientMo" +
-        "de")));
-            this.changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("changeFloatingObjectAlignmentItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.changeFloatingObjectAlignmentItem1.Name = "changeFloatingObjectAlignmentItem1";
             // 
             // setFloatingObjectTopLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectTopLeftAlignmentItem1, "setFloatingObjectTopLeftAlignmentItem1");
             this.setFloatingObjectTopLeftAlignmentItem1.Id = 133;
             this.setFloatingObjectTopLeftAlignmentItem1.Name = "setFloatingObjectTopLeftAlignmentItem1";
             // 
             // setFloatingObjectTopCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectTopCenterAlignmentItem1, "setFloatingObjectTopCenterAlignmentItem1");
             this.setFloatingObjectTopCenterAlignmentItem1.Id = 134;
             this.setFloatingObjectTopCenterAlignmentItem1.Name = "setFloatingObjectTopCenterAlignmentItem1";
             // 
             // setFloatingObjectTopRightAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectTopRightAlignmentItem1, "setFloatingObjectTopRightAlignmentItem1");
             this.setFloatingObjectTopRightAlignmentItem1.Id = 135;
             this.setFloatingObjectTopRightAlignmentItem1.Name = "setFloatingObjectTopRightAlignmentItem1";
             // 
             // setFloatingObjectMiddleLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectMiddleLeftAlignmentItem1, "setFloatingObjectMiddleLeftAlignmentItem1");
             this.setFloatingObjectMiddleLeftAlignmentItem1.Id = 136;
             this.setFloatingObjectMiddleLeftAlignmentItem1.Name = "setFloatingObjectMiddleLeftAlignmentItem1";
             // 
             // setFloatingObjectMiddleCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectMiddleCenterAlignmentItem1, "setFloatingObjectMiddleCenterAlignmentItem1");
             this.setFloatingObjectMiddleCenterAlignmentItem1.Id = 137;
             this.setFloatingObjectMiddleCenterAlignmentItem1.Name = "setFloatingObjectMiddleCenterAlignmentItem1";
             // 
             // setFloatingObjectMiddleRightAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectMiddleRightAlignmentItem1, "setFloatingObjectMiddleRightAlignmentItem1");
             this.setFloatingObjectMiddleRightAlignmentItem1.Id = 138;
             this.setFloatingObjectMiddleRightAlignmentItem1.Name = "setFloatingObjectMiddleRightAlignmentItem1";
             // 
             // setFloatingObjectBottomLeftAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectBottomLeftAlignmentItem1, "setFloatingObjectBottomLeftAlignmentItem1");
             this.setFloatingObjectBottomLeftAlignmentItem1.Id = 139;
             this.setFloatingObjectBottomLeftAlignmentItem1.Name = "setFloatingObjectBottomLeftAlignmentItem1";
             // 
             // setFloatingObjectBottomCenterAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectBottomCenterAlignmentItem1, "setFloatingObjectBottomCenterAlignmentItem1");
             this.setFloatingObjectBottomCenterAlignmentItem1.Id = 140;
             this.setFloatingObjectBottomCenterAlignmentItem1.Name = "setFloatingObjectBottomCenterAlignmentItem1";
             // 
             // setFloatingObjectBottomRightAlignmentItem1
             // 
-            resources.ApplyResources(this.setFloatingObjectBottomRightAlignmentItem1, "setFloatingObjectBottomRightAlignmentItem1");
             this.setFloatingObjectBottomRightAlignmentItem1.Id = 141;
             this.setFloatingObjectBottomRightAlignmentItem1.Name = "setFloatingObjectBottomRightAlignmentItem1";
             // 
             // floatingObjectBringForwardSubItem1
             // 
-            resources.ApplyResources(this.floatingObjectBringForwardSubItem1, "floatingObjectBringForwardSubItem1");
             this.floatingObjectBringForwardSubItem1.Id = 142;
             this.floatingObjectBringForwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringForwardItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringToFrontItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringInFrontOfTextItem1)});
-            this.floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDe" +
-        "lta")));
-            this.floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleD" +
-        "elta")));
-            this.floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.GradientMo" +
-        "de")));
-            this.floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("floatingObjectBringForwardSubItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.floatingObjectBringForwardSubItem1.Name = "floatingObjectBringForwardSubItem1";
             // 
             // floatingObjectBringForwardItem1
             // 
-            resources.ApplyResources(this.floatingObjectBringForwardItem1, "floatingObjectBringForwardItem1");
             this.floatingObjectBringForwardItem1.Id = 143;
             this.floatingObjectBringForwardItem1.Name = "floatingObjectBringForwardItem1";
             // 
             // floatingObjectBringToFrontItem1
             // 
-            resources.ApplyResources(this.floatingObjectBringToFrontItem1, "floatingObjectBringToFrontItem1");
             this.floatingObjectBringToFrontItem1.Id = 144;
             this.floatingObjectBringToFrontItem1.Name = "floatingObjectBringToFrontItem1";
             // 
             // floatingObjectBringInFrontOfTextItem1
             // 
-            resources.ApplyResources(this.floatingObjectBringInFrontOfTextItem1, "floatingObjectBringInFrontOfTextItem1");
             this.floatingObjectBringInFrontOfTextItem1.Id = 145;
             this.floatingObjectBringInFrontOfTextItem1.Name = "floatingObjectBringInFrontOfTextItem1";
             // 
             // floatingObjectSendBackwardSubItem1
             // 
-            resources.ApplyResources(this.floatingObjectSendBackwardSubItem1, "floatingObjectSendBackwardSubItem1");
             this.floatingObjectSendBackwardSubItem1.Id = 146;
             this.floatingObjectSendBackwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendBackwardItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendToBackItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendBehindTextItem1)});
-            this.floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDe" +
-        "lta")));
-            this.floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleD" +
-        "elta")));
-            this.floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.GradientMo" +
-        "de")));
-            this.floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("floatingObjectSendBackwardSubItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.floatingObjectSendBackwardSubItem1.Name = "floatingObjectSendBackwardSubItem1";
             // 
             // floatingObjectSendBackwardItem1
             // 
-            resources.ApplyResources(this.floatingObjectSendBackwardItem1, "floatingObjectSendBackwardItem1");
             this.floatingObjectSendBackwardItem1.Id = 147;
             this.floatingObjectSendBackwardItem1.Name = "floatingObjectSendBackwardItem1";
             // 
             // floatingObjectSendToBackItem1
             // 
-            resources.ApplyResources(this.floatingObjectSendToBackItem1, "floatingObjectSendToBackItem1");
             this.floatingObjectSendToBackItem1.Id = 148;
             this.floatingObjectSendToBackItem1.Name = "floatingObjectSendToBackItem1";
             // 
             // floatingObjectSendBehindTextItem1
             // 
-            resources.ApplyResources(this.floatingObjectSendBehindTextItem1, "floatingObjectSendBehindTextItem1");
             this.floatingObjectSendBehindTextItem1.Id = 149;
             this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
@@ -1611,7 +1388,6 @@
             // 
             // buttonPanel
             // 
-            resources.ApplyResources(this.buttonPanel, "buttonPanel");
             this.buttonPanel.ButtonInterval = 38;
             this.buttonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraEditors.ButtonsPanelControl.ButtonControl(resources.GetString("buttonPanel.Buttons"), global::DevExpress.MailClient.Win.Properties.Resources.NewMail_16x16, ((bool)(resources.GetObject("buttonPanel.Buttons1"))), ((bool)(resources.GetObject("buttonPanel.Buttons2"))), resources.GetString("buttonPanel.Buttons3")),
@@ -1619,6 +1395,7 @@
             new DevExpress.XtraEditors.ButtonsPanelControl.ButtonControl(resources.GetString("buttonPanel.Buttons8"), global::DevExpress.MailClient.Win.Properties.Resources.Custom_Flag, ((bool)(resources.GetObject("buttonPanel.Buttons9"))), ((bool)(resources.GetObject("buttonPanel.Buttons10"))), resources.GetString("buttonPanel.Buttons11")),
             new DevExpress.XtraEditors.ButtonsPanelControl.ButtonControl(resources.GetString("buttonPanel.Buttons12"), global::DevExpress.MailClient.Win.Properties.Resources.reading, ((bool)(resources.GetObject("buttonPanel.Buttons13"))), ((bool)(resources.GetObject("buttonPanel.Buttons14"))), resources.GetString("buttonPanel.Buttons15"))});
             this.buttonPanel.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            resources.ApplyResources(this.buttonPanel, "buttonPanel");
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.ToolTipController = this.buttonPanelTooltipController;
             // 
@@ -1628,17 +1405,14 @@
             // 
             // panelControl
             // 
-            resources.ApplyResources(this.panelControl, "panelControl");
-            this.buttonPanelTooltipController.SetAllowHtmlText(this.panelControl, ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("panelControl.AllowHtmlText"))));
             this.panelControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl.Controls.Add(this.btnSend);
             this.panelControl.Controls.Add(this.lblTo);
             this.panelControl.Controls.Add(this.lblSubject);
             this.panelControl.Controls.Add(this.edtTo);
             this.panelControl.Controls.Add(this.edtSubject);
+            resources.ApplyResources(this.panelControl, "panelControl");
             this.panelControl.Name = "panelControl";
-            this.buttonPanelTooltipController.SetTitle(this.panelControl, resources.GetString("panelControl.Title"));
-            this.buttonPanelTooltipController.SetToolTip(this.panelControl, resources.GetString("panelControl.ToolTip"));
-            this.buttonPanelTooltipController.SetToolTipIconType(this.panelControl, ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("panelControl.ToolTipIconType"))));
             // 
             // lblTo
             // 
@@ -1654,12 +1428,6 @@
             // 
             resources.ApplyResources(this.edtTo, "edtTo");
             this.edtTo.Name = "edtTo";
-            this.edtTo.Properties.AccessibleDescription = resources.GetString("edtTo.Properties.AccessibleDescription");
-            this.edtTo.Properties.AccessibleName = resources.GetString("edtTo.Properties.AccessibleName");
-            this.edtTo.Properties.Appearance.FontSizeDelta = ((int)(resources.GetObject("edtTo.Properties.Appearance.FontSizeDelta")));
-            this.edtTo.Properties.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("edtTo.Properties.Appearance.FontStyleDelta")));
-            this.edtTo.Properties.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("edtTo.Properties.Appearance.GradientMode")));
-            this.edtTo.Properties.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("edtTo.Properties.Appearance.Image")));
             this.edtTo.Properties.Appearance.Options.UseFont = true;
             this.edtTo.Properties.DeleteTokenOnGlyphClick = DevExpress.Utils.DefaultBoolean.False;
             this.edtTo.Properties.DropDownShowMode = DevExpress.XtraEditors.TokenEditDropDownShowMode.Outlook;
@@ -1678,11 +1446,7 @@
             // ucMessageInfo1
             // 
             resources.ApplyResources(this.ucMessageInfo1, "ucMessageInfo1");
-            this.buttonPanelTooltipController.SetAllowHtmlText(this.ucMessageInfo1, ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("ucMessageInfo1.AllowHtmlText"))));
             this.ucMessageInfo1.Name = "ucMessageInfo1";
-            this.buttonPanelTooltipController.SetTitle(this.ucMessageInfo1, resources.GetString("ucMessageInfo1.Title"));
-            this.buttonPanelTooltipController.SetToolTip(this.ucMessageInfo1, resources.GetString("ucMessageInfo1.ToolTip"));
-            this.buttonPanelTooltipController.SetToolTipIconType(this.ucMessageInfo1, ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("ucMessageInfo1.ToolTipIconType"))));
             // 
             // richEditBarController1
             // 
@@ -1804,33 +1568,34 @@
             // 
             // showFontFormItem1
             // 
-            resources.ApplyResources(this.showFontFormItem1, "showFontFormItem1");
             this.showFontFormItem1.Id = -1;
             this.showFontFormItem1.Name = "showFontFormItem1";
             // 
             // showParagraphFormItem1
             // 
-            resources.ApplyResources(this.showParagraphFormItem1, "showParagraphFormItem1");
             this.showParagraphFormItem1.Id = -1;
             this.showParagraphFormItem1.Name = "showParagraphFormItem1";
             // 
             // showEditStyleFormItem1
             // 
-            resources.ApplyResources(this.showEditStyleFormItem1, "showEditStyleFormItem1");
             this.showEditStyleFormItem1.Id = -1;
             this.showEditStyleFormItem1.Name = "showEditStyleFormItem1";
             // 
             // showInsertTableCellsFormItem1
             // 
-            resources.ApplyResources(this.showInsertTableCellsFormItem1, "showInsertTableCellsFormItem1");
             this.showInsertTableCellsFormItem1.Id = -1;
             this.showInsertTableCellsFormItem1.Name = "showInsertTableCellsFormItem1";
+            // 
+            // btnSend
+            // 
+            resources.ApplyResources(this.btnSend, "btnSend");
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // frmEditMail
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             resources.ApplyResources(this, "$this");
-            this.buttonPanelTooltipController.SetAllowHtmlText(this, ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("$this.AllowHtmlText"))));
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.statusBar);
@@ -1840,9 +1605,6 @@
             this.Name = "frmEditMail";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.statusBar;
-            this.buttonPanelTooltipController.SetTitle(this, resources.GetString("$this.Title"));
-            this.buttonPanelTooltipController.SetToolTip(this, resources.GetString("$this.ToolTip"));
-            this.buttonPanelTooltipController.SetToolTipIconType(this, ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("$this.ToolTipIconType"))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEditMail_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -2041,5 +1803,6 @@
         private XtraEditors.PictureEdit picContact;
         private DevExpress.XtraEditors.ButtonsPanelControl.ButtonPanelControl buttonPanel;
         private Utils.ToolTipController buttonPanelTooltipController;
+        private XtraEditors.SimpleButton btnSend;
     }
 }

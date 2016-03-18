@@ -2,6 +2,6 @@
 {
     public class Constants
     {
-        public const string ACCOUNT_FILE = @".\Data\Accounts.xml";
+        public const string ACCOUNTS_FILE = @".\Data\Accounts.xml";
     }
 }
