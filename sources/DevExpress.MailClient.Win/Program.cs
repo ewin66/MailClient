@@ -14,6 +14,7 @@ using System.Threading;
 using DevExpress.MailClient.EF;
 using DevExpress.XtraEditors;
 using System.Net.Mail;
+using System.Xml;
 
 namespace DevExpress.MailClient.Win {
     static class Program {
@@ -70,7 +71,22 @@ namespace DevExpress.MailClient.Win {
 
         private static bool CheckAccountExists()
         {
-            return File.Exists(Constants.ACCOUNTS_FILE);
+            if(File.Exists(Constants.ACCOUNTS_FILE))
+            {
+                try
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load(Constants.ACCOUNTS_FILE);
+                    var accounts = doc.DocumentElement.SelectNodes("account");
+                    return accounts.Count > 0;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("Error - Cannot load accounts file" + ex.Message);
+                }
+            }
+            
+            return false;
         }
 
         private static bool CreateAccount()
