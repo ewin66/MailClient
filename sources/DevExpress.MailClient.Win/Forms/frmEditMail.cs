@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars;
 using System.Net.Mail;
+using DevExpress.Data.Helpers;
 using DevExpress.MailClient.Win.Helpers.Email;
 
 namespace DevExpress.MailClient.Win {
@@ -212,6 +214,43 @@ namespace DevExpress.MailClient.Win {
                 receivers += token.Description;
             }
             return receivers;
+        }
+
+
+        private void barButtonItemAttach_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                RestoreDirectory = true,
+                Multiselect = true
+            };
+
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var tokenAttachements = new StringBuilder();
+                var tokens = tokenEditAttachements.Properties.Tokens;
+                var valueFiles = new BindingList<string>();
+                foreach (TokenEditToken selectedToken in tokenEditAttachements.GetTokenList())
+                {
+                    valueFiles.Add(selectedToken.Value.ToString());
+                }
+
+                foreach (var fullFileName in openFileDialog.FileNames)
+                {
+                    var file = Path.GetFileName(fullFileName);
+                    var token = new TokenEditToken { Description = file, Value = fullFileName };
+                    if (tokens.FirstOrDefault(t => t.Description == token.Description) == null)
+                    {
+                        tokens.Add(token);
+                    }
+                    if (!valueFiles.Contains(fullFileName))
+                    {
+                        valueFiles.Add(fullFileName);
+                    }
+                }
+                tokenEditAttachements.EditValue = valueFiles;
+                //tokenEditAttachements.EditValue = tokenEditAttachements.Properties.Tokens.Last().Description;
+            }
         }
     }
 }

@@ -160,6 +160,7 @@
             this.floatingObjectSendBackwardItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardItem();
             this.floatingObjectSendToBackItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem();
             this.floatingObjectSendBehindTextItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem();
+            this.barButtonItemAttach = new DevExpress.XtraBars.BarButtonItem();
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
             this.tableDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableDesignRibbonPage();
             this.tableStylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup();
@@ -180,26 +181,32 @@
             this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
             this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
             this.insertRibbonPage1 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
+            this.ribbonPageGroupInclude = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tablesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
             this.illustrationsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup();
             this.linksRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
             this.textRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TextRibbonPageGroup();
             this.symbolsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
             this.repositoryItemRichEditStyleEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.statusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.buttonPanel = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonPanelControl();
             this.buttonPanelTooltipController = new DevExpress.Utils.ToolTipController(this.components);
+            this.edtTo = new DevExpress.XtraEditors.TokenEdit();
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
+            this.tokenEditAttachements = new DevExpress.XtraEditors.TokenEdit();
+            this.labelAttachements = new DevExpress.XtraEditors.LabelControl();
+            this.btnSend = new DevExpress.XtraEditors.SimpleButton();
             this.lblTo = new DevExpress.XtraEditors.LabelControl();
             this.lblSubject = new DevExpress.XtraEditors.LabelControl();
-            this.edtTo = new DevExpress.XtraEditors.TokenEdit();
             this.ucMessageInfo1 = new DevExpress.MailClient.Win.Controls.ucMessageInfo();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             this.showFontFormItem1 = new DevExpress.XtraRichEdit.UI.ShowFontFormItem();
             this.showParagraphFormItem1 = new DevExpress.XtraRichEdit.UI.ShowParagraphFormItem();
             this.showEditStyleFormItem1 = new DevExpress.XtraRichEdit.UI.ShowEditStyleFormItem();
             this.showInsertTableCellsFormItem1 = new DevExpress.XtraRichEdit.UI.ShowInsertTableCellsFormItem();
-            this.btnSend = new DevExpress.XtraEditors.SimpleButton();
+            this.insertTableItem2 = new DevExpress.XtraRichEdit.UI.InsertTableItem();
+            this.insertTableItem3 = new DevExpress.XtraRichEdit.UI.InsertTableItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
@@ -214,9 +221,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
             this.panelControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokenEditAttachements.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -392,8 +402,9 @@
             this.floatingObjectSendBackwardSubItem1,
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
-            this.floatingObjectSendBehindTextItem1});
-            this.ribbonControl.MaxItemId = 150;
+            this.floatingObjectSendBehindTextItem1,
+            this.barButtonItemAttach});
+            this.ribbonControl.MaxItemId = 19;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1,
@@ -407,7 +418,8 @@
             this.repositoryItemRichEditStyleEdit1,
             this.repositoryItemBorderLineStyle1,
             this.repositoryItemBorderLineWeight1,
-            this.repositoryItemFloatingObjectOutlineWeight1});
+            this.repositoryItemFloatingObjectOutlineWeight1,
+            this.repositoryItemDateEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl.StatusBar = this.statusBar;
             this.ribbonControl.Toolbar.ItemLinks.Add(this.fileSaveItem1);
@@ -490,6 +502,7 @@
             // changeFontNameItem1
             // 
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
+            resources.ApplyResources(this.changeFontNameItem1, "changeFontNameItem1");
             this.changeFontNameItem1.Id = 21;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
             // 
@@ -1016,6 +1029,7 @@
             // 
             this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
             this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
+            resources.ApplyResources(this.changeFloatingObjectOutlineWeightItem1, "changeFloatingObjectOutlineWeightItem1");
             this.changeFloatingObjectOutlineWeightItem1.Id = 124;
             this.changeFloatingObjectOutlineWeightItem1.Name = "changeFloatingObjectOutlineWeightItem1";
             // 
@@ -1177,6 +1191,15 @@
             this.floatingObjectSendBehindTextItem1.Id = 149;
             this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
+            // barButtonItemAttach
+            // 
+            resources.ApplyResources(this.barButtonItemAttach, "barButtonItemAttach");
+            this.barButtonItemAttach.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemAttach.Glyph")));
+            this.barButtonItemAttach.Id = 18;
+            this.barButtonItemAttach.Name = "barButtonItemAttach";
+            this.barButtonItemAttach.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItemAttach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAttach_ItemClick);
+            // 
             // tableToolsRibbonPageCategory1
             // 
             resources.ApplyResources(this.tableToolsRibbonPageCategory1, "tableToolsRibbonPageCategory1");
@@ -1334,6 +1357,7 @@
             // insertRibbonPage1
             // 
             this.insertRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupInclude,
             this.tablesRibbonPageGroup1,
             this.illustrationsRibbonPageGroup1,
             this.linksRibbonPageGroup1,
@@ -1341,6 +1365,13 @@
             this.symbolsRibbonPageGroup1});
             this.insertRibbonPage1.Name = "insertRibbonPage1";
             resources.ApplyResources(this.insertRibbonPage1, "insertRibbonPage1");
+            // 
+            // ribbonPageGroupInclude
+            // 
+            this.ribbonPageGroupInclude.AllowTextClipping = false;
+            this.ribbonPageGroupInclude.ItemLinks.Add(this.barButtonItemAttach);
+            this.ribbonPageGroupInclude.Name = "ribbonPageGroupInclude";
+            resources.ApplyResources(this.ribbonPageGroupInclude, "ribbonPageGroupInclude");
             // 
             // tablesRibbonPageGroup1
             // 
@@ -1380,6 +1411,15 @@
             this.repositoryItemRichEditStyleEdit1.Control = this.richEditControl;
             this.repositoryItemRichEditStyleEdit1.Name = "repositoryItemRichEditStyleEdit1";
             // 
+            // repositoryItemDateEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemDateEdit1, "repositoryItemDateEdit1");
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemDateEdit1.Buttons"))))});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemDateEdit1.CalendarTimeProperties.Buttons"))))});
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            // 
             // statusBar
             // 
             resources.ApplyResources(this.statusBar, "statusBar");
@@ -1403,27 +1443,6 @@
             // 
             this.buttonPanelTooltipController.ToolTipLocation = DevExpress.Utils.ToolTipLocation.BottomLeft;
             // 
-            // panelControl
-            // 
-            this.panelControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl.Controls.Add(this.btnSend);
-            this.panelControl.Controls.Add(this.lblTo);
-            this.panelControl.Controls.Add(this.lblSubject);
-            this.panelControl.Controls.Add(this.edtTo);
-            this.panelControl.Controls.Add(this.edtSubject);
-            resources.ApplyResources(this.panelControl, "panelControl");
-            this.panelControl.Name = "panelControl";
-            // 
-            // lblTo
-            // 
-            resources.ApplyResources(this.lblTo, "lblTo");
-            this.lblTo.Name = "lblTo";
-            // 
-            // lblSubject
-            // 
-            resources.ApplyResources(this.lblSubject, "lblSubject");
-            this.lblSubject.Name = "lblSubject";
-            // 
             // edtTo
             // 
             resources.ApplyResources(this.edtTo, "edtTo");
@@ -1442,6 +1461,50 @@
             this.edtTo.CustomDrawTokenGlyph += new DevExpress.XtraEditors.TokenEditCustomDrawTokenGlyphEventHandler(this.edtTo_CustomDrawGlyph);
             this.edtTo.EditValueChanged += new System.EventHandler(this.edtTo_EditValueChanged);
             this.edtTo.SizeChanged += new System.EventHandler(this.edtTo_SizeChanged);
+            // 
+            // panelControl
+            // 
+            this.panelControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl.Controls.Add(this.tokenEditAttachements);
+            this.panelControl.Controls.Add(this.labelAttachements);
+            this.panelControl.Controls.Add(this.btnSend);
+            this.panelControl.Controls.Add(this.lblTo);
+            this.panelControl.Controls.Add(this.lblSubject);
+            this.panelControl.Controls.Add(this.edtTo);
+            this.panelControl.Controls.Add(this.edtSubject);
+            resources.ApplyResources(this.panelControl, "panelControl");
+            this.panelControl.Name = "panelControl";
+            // 
+            // tokenEditAttachements
+            // 
+            resources.ApplyResources(this.tokenEditAttachements, "tokenEditAttachements");
+            this.tokenEditAttachements.MenuManager = this.ribbonControl;
+            this.tokenEditAttachements.Name = "tokenEditAttachements";
+            this.tokenEditAttachements.Properties.EditValueType = DevExpress.XtraEditors.TokenEditValueType.List;
+            this.tokenEditAttachements.Properties.Separators.AddRange(new string[] {
+            ","});
+            this.tokenEditAttachements.ToolTipController = this.buttonPanelTooltipController;
+            // 
+            // labelAttachements
+            // 
+            resources.ApplyResources(this.labelAttachements, "labelAttachements");
+            this.labelAttachements.Name = "labelAttachements";
+            // 
+            // btnSend
+            // 
+            resources.ApplyResources(this.btnSend, "btnSend");
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // lblTo
+            // 
+            resources.ApplyResources(this.lblTo, "lblTo");
+            this.lblTo.Name = "lblTo";
+            // 
+            // lblSubject
+            // 
+            resources.ApplyResources(this.lblSubject, "lblSubject");
+            this.lblSubject.Name = "lblSubject";
             // 
             // ucMessageInfo1
             // 
@@ -1586,11 +1649,15 @@
             this.showInsertTableCellsFormItem1.Id = -1;
             this.showInsertTableCellsFormItem1.Name = "showInsertTableCellsFormItem1";
             // 
-            // btnSend
+            // insertTableItem2
             // 
-            resources.ApplyResources(this.btnSend, "btnSend");
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.insertTableItem2.Id = 64;
+            this.insertTableItem2.Name = "insertTableItem2";
+            // 
+            // insertTableItem3
+            // 
+            this.insertTableItem3.Id = 64;
+            this.insertTableItem3.Name = "insertTableItem3";
             // 
             // frmEditMail
             // 
@@ -1621,10 +1688,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokenEditAttachements.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1804,5 +1874,12 @@
         private DevExpress.XtraEditors.ButtonsPanelControl.ButtonPanelControl buttonPanel;
         private Utils.ToolTipController buttonPanelTooltipController;
         private XtraEditors.SimpleButton btnSend;
+        private XtraRichEdit.UI.InsertTableItem insertTableItem2;
+        private XtraRichEdit.UI.InsertTableItem insertTableItem3;
+        private XtraBars.BarButtonItem barButtonItemAttach;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupInclude;
+        private XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
+        private XtraEditors.LabelControl labelAttachements;
+        private XtraEditors.TokenEdit tokenEditAttachements;
     }
 }
