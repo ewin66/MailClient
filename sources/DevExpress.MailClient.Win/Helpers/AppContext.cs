@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using DevExpress.MailClient.Win.Helpers.Accounts;
 
 namespace DevExpress.MailClient.Win.Helpers
 {
@@ -6,25 +7,20 @@ namespace DevExpress.MailClient.Win.Helpers
     {
         private static AppContext _context;
 
-        public static AppContext CurrentContext
-        {
-            get { return _context ?? (_context = new AppContext()); }
-        }
+        private AppSettings _settings;
+        private List<Account> _accounts;
 
         private readonly IAppSettingsReader _appSettingsReader;
+        private readonly IAccountReader _accountReader;
+
         private AppContext()
         {
             _appSettingsReader = new AppSettingsReader();
+            _accountReader = new AccountReader();
         }
 
-        private AppSettings _settings;
-
-        public AppSettings Settings
-        {
-            get
-            {
-                return _settings ?? (_settings = _appSettingsReader.Read());
-            }
-        }
+        public static AppContext CurrentContext => _context ?? (_context = new AppContext());
+        public AppSettings Settings => _settings ?? (_settings = _appSettingsReader.Read());
+        public List<Account> Accounts => _accounts ?? (_accounts = _accountReader.GetAccounts());
     }
 }
