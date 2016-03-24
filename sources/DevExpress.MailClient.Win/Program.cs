@@ -15,6 +15,7 @@ using DevExpress.MailClient.EF;
 using DevExpress.XtraEditors;
 using System.Net.Mail;
 using System.Xml;
+using DevExpress.MailClient.Win.Helpers.Accounts;
 
 // Hello eveybody! Gabi was here :P
 // And I'm still here...
@@ -74,21 +75,14 @@ namespace DevExpress.MailClient.Win {
 
         private static bool CheckAccountExists()
         {
-            if(File.Exists(Constants.ACCOUNTS_FILE))
+            try
             {
-                try
-                {
-                    XmlDocument doc = new XmlDocument();
-                    doc.Load(Constants.ACCOUNTS_FILE);
-                    var accounts = doc.DocumentElement.SelectNodes("account");
-                    return accounts.Count > 0;
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show("Error - Cannot load accounts file" + ex.Message);
-                }
+                return AppContext.CurrentContext.Accounts.Any();
             }
-            
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Error - Cannot load accounts file" + ex.Message);
+            }
             return false;
         }
 

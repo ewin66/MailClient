@@ -354,9 +354,12 @@
     <Compile Include="Helpers.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Helpers\Accounts\Account.cs" />
+    <Compile Include="Helpers\Accounts\AccountReader.cs" />
     <Compile Include="Helpers\AppContext.cs" />
     <Compile Include="Helpers\AppSettingsReader.cs" />
     <Compile Include="Helpers\Email\EmailSender.cs" />
+    <Compile Include="Helpers\Accounts\IAccountReader.cs" />
     <Compile Include="Helpers\IAppSettingsReader.cs" />
     <Compile Include="Modules\Calendar.cs">
       <SubType>UserControl</SubType>
